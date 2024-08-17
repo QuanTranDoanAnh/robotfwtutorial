@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T13:17:22.416329" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T14:04:37.671102" rpa="false" schemaversion="5">
 <suite id="s1" name="BasicSearch" source="D:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
 <test id="s1-t1" name="Verify basic search functionality for eBay" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-17T13:17:22.794749" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg time="2024-08-17T14:04:37.953619" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-17T13:17:22.794749" elapsed="4.011140"/>
+<status status="PASS" start="2024-08-17T14:04:37.952525" elapsed="3.817368"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-17T14:04:41.771927" elapsed="0.067532"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-17T13:17:26.807864" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
-<arg>//*[@id="gh-ac"]</arg>
+<msg time="2024-08-17T14:04:41.841460" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
+<arg>xpath://*[@id="gh-ac"]</arg>
 <arg>mobile</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-17T13:17:26.807358" elapsed="0.135312"/>
+<status status="PASS" start="2024-08-17T14:04:41.840460" elapsed="0.203088"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-08-17T13:17:26.943175" level="INFO">Sending key(s) ('[Return]',) to //*[@id="gh-btn"] element.</msg>
-<msg time="2024-08-17T13:17:30.161279" level="INFO">Sending keys [Return]</msg>
-<arg>//*[@id="gh-btn"]</arg>
-<arg>[Return]</arg>
+<msg time="2024-08-17T14:04:42.044546" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg time="2024-08-17T14:04:44.795698" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-08-17T14:04:44.796789" level="INFO">Releasing special key RETURN.</msg>
+<arg>xpath://*[@id="gh-btn"]</arg>
+<arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-08-17T13:17:26.943175" elapsed="3.322517"/>
+<status status="PASS" start="2024-08-17T14:04:42.043548" elapsed="2.887004"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-08-17T13:17:30.294185" level="INFO">Current page contains text 'results for mobile'.</msg>
+<msg time="2024-08-17T14:04:44.992797" level="INFO">Current page contains text 'results for mobile'.</msg>
 <arg>results for mobile</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-08-17T13:17:30.266690" elapsed="0.027495"/>
+<status status="PASS" start="2024-08-17T14:04:44.931586" elapsed="0.061211"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-17T13:17:30.295196" elapsed="2.285731"/>
+<status status="PASS" start="2024-08-17T14:04:44.993798" elapsed="2.276260"/>
 </kw>
 <doc>This test case verify the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" start="2024-08-17T13:17:22.792749" elapsed="9.789460"/>
+<status status="PASS" start="2024-08-17T14:04:37.951534" elapsed="9.319512"/>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="PASS" start="2024-08-17T13:17:22.419980" elapsed="10.163265"/>
+<status status="PASS" start="2024-08-17T14:04:37.673103" elapsed="9.599942"/>
 </suite>
 <statistics>
 <total>
