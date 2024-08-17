@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T12:56:34.457790" rpa="false" schemaversion="5">
+<suite id="s1" name="GoogleSearch" source="D:\programming-new\robotfwtutorial\Tests\Google\FunctionalTestSuite\GoogleSearch.robot">
+<test id="s1-t1" name="This is sample test case" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-17T12:56:34.760382" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-17T12:56:34.759811" elapsed="23.663959"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-17T12:56:58.424782" elapsed="2.295015"/>
+</kw>
+<doc>Google test</doc>
+<tag>regression</tag>
+<status status="PASS" start="2024-08-17T12:56:34.758751" elapsed="25.962085"/>
+</test>
+<status status="PASS" start="2024-08-17T12:56:34.460859" elapsed="26.263850"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="GoogleSearch">GoogleSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
