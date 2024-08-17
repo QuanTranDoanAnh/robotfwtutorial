@@ -3,8 +3,8 @@ Documentation    Basic Search Functionality
 Resource    ../../Resources/CommonFunctionality.robot
 Resource    ../../Resources/eBay_UserDefinedKeywords.robot
 
-Test Setup    Start TestCase
-Test Teardown    Finish TestCase
+Test Setup    CommonFunctionality.Start TestCase
+Test Teardown    CommonFunctionality.Finish TestCase
 *** Variables ***
 
 
@@ -15,8 +15,8 @@ Verify basic search functionality for eBay
     [Tags]    Functional
     
     
-    Verify Search Results
-    Filter results by condition
-    Verify filter results
+    eBay_UserDefinedKeywords.Verify Search Results
+    eBay_UserDefinedKeywords.Filter results by condition
+    eBay_UserDefinedKeywords.Verify filter results
 
 *** Keywords ***
