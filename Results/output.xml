@@ -1,50 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T14:04:37.671102" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T14:08:40.631568" rpa="false" schemaversion="5">
 <suite id="s1" name="BasicSearch" source="D:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
 <test id="s1-t1" name="Verify basic search functionality for eBay" line="10">
+<kw name="Start TestCase">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:04:37.953619" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg time="2024-08-17T14:08:40.981873" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-17T14:04:37.952525" elapsed="3.817368"/>
+<status status="PASS" start="2024-08-17T14:08:40.981873" elapsed="4.395912"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-17T14:04:41.771927" elapsed="0.067532"/>
+<status status="PASS" start="2024-08-17T14:08:45.378745" elapsed="0.060838"/>
 </kw>
+<status status="PASS" start="2024-08-17T14:08:40.979836" elapsed="4.461254"/>
+</kw>
+<kw name="Verify Search Results">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:04:41.841460" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
+<msg time="2024-08-17T14:08:45.442603" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
 <arg>xpath://*[@id="gh-ac"]</arg>
 <arg>mobile</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-17T14:04:41.840460" elapsed="0.203088"/>
+<status status="PASS" start="2024-08-17T14:08:45.442603" elapsed="0.165615"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:04:42.044546" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
-<msg time="2024-08-17T14:04:44.795698" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2024-08-17T14:04:44.796789" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2024-08-17T14:08:45.609220" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg time="2024-08-17T14:08:49.162958" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-08-17T14:08:49.162958" level="INFO">Releasing special key RETURN.</msg>
 <arg>xpath://*[@id="gh-btn"]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-08-17T14:04:42.043548" elapsed="2.887004"/>
+<status status="PASS" start="2024-08-17T14:08:45.608218" elapsed="3.681401"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:04:44.992797" level="INFO">Current page contains text 'results for mobile'.</msg>
+<msg time="2024-08-17T14:08:49.341887" level="INFO">Current page contains text 'results for mobile'.</msg>
 <arg>results for mobile</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-08-17T14:04:44.931586" elapsed="0.061211"/>
+<status status="PASS" start="2024-08-17T14:08:49.289619" elapsed="0.053295"/>
 </kw>
+<status status="PASS" start="2024-08-17T14:08:45.442098" elapsed="3.900816"/>
+</kw>
+<kw name="Finish TestCase">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-17T14:04:44.993798" elapsed="2.276260"/>
+<status status="PASS" start="2024-08-17T14:08:49.343902" elapsed="2.341544"/>
+</kw>
+<status status="PASS" start="2024-08-17T14:08:49.343902" elapsed="2.341544"/>
 </kw>
 <doc>This test case verify the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" start="2024-08-17T14:04:37.951534" elapsed="9.319512"/>
+<status status="PASS" start="2024-08-17T14:08:40.978556" elapsed="10.707904"/>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="PASS" start="2024-08-17T14:04:37.673103" elapsed="9.599942"/>
+<status status="PASS" start="2024-08-17T14:08:40.634146" elapsed="11.055315"/>
 </suite>
 <statistics>
 <total>
