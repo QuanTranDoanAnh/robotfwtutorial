@@ -1,69 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T14:08:40.631568" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T15:09:02.036048" rpa="false" schemaversion="5">
 <suite id="s1" name="BasicSearch" source="D:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
-<test id="s1-t1" name="Verify basic search functionality for eBay" line="10">
-<kw name="Start TestCase">
+<test id="s1-t1" name="Verify basic search functionality for eBay" line="11">
+<kw name="Start TestCase" owner="CommonFunctionality">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:08:40.981873" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg time="2024-08-17T15:09:02.330254" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-17T14:08:40.981873" elapsed="4.395912"/>
+<status status="PASS" start="2024-08-17T15:09:02.330254" elapsed="4.423156"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-17T14:08:45.378745" elapsed="0.060838"/>
+<status status="PASS" start="2024-08-17T15:09:06.754596" elapsed="0.069571"/>
 </kw>
-<status status="PASS" start="2024-08-17T14:08:40.979836" elapsed="4.461254"/>
+<status status="PASS" start="2024-08-17T15:09:02.329175" elapsed="4.495503"/>
 </kw>
-<kw name="Verify Search Results">
+<kw name="Verify Search Results" owner="eBay_UserDefinedKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:08:45.442603" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
+<msg time="2024-08-17T15:09:06.827232" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
 <arg>xpath://*[@id="gh-ac"]</arg>
 <arg>mobile</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-17T14:08:45.442603" elapsed="0.165615"/>
+<status status="PASS" start="2024-08-17T15:09:06.826236" elapsed="0.262911"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:08:45.609220" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
-<msg time="2024-08-17T14:08:49.162958" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2024-08-17T14:08:49.162958" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2024-08-17T15:09:07.090155" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg time="2024-08-17T15:09:10.357154" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-08-17T15:09:10.357747" level="INFO">Releasing special key RETURN.</msg>
 <arg>xpath://*[@id="gh-btn"]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-08-17T14:08:45.608218" elapsed="3.681401"/>
+<status status="PASS" start="2024-08-17T15:09:07.089147" elapsed="3.296917"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-08-17T14:08:49.341887" level="INFO">Current page contains text 'results for mobile'.</msg>
+<msg time="2024-08-17T15:09:10.455224" level="INFO">Current page contains text 'results for mobile'.</msg>
 <arg>results for mobile</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-08-17T14:08:49.289619" elapsed="0.053295"/>
+<status status="PASS" start="2024-08-17T15:09:10.386064" elapsed="0.070160"/>
 </kw>
-<status status="PASS" start="2024-08-17T14:08:45.442098" elapsed="3.900816"/>
+<status status="PASS" start="2024-08-17T15:09:06.825218" elapsed="3.631006"/>
 </kw>
-<kw name="Finish TestCase">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-17T14:08:49.343902" elapsed="2.341544"/>
+<kw name="Filter results by condition" owner="eBay_UserDefinedKeywords">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-08-17T15:09:10.457225" level="INFO">Simulating Mouse Over on element '//*[@id="nid-tbw-3"]/button/span'.</msg>
+<msg time="2024-08-17T15:09:11.035434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-17T15:09:11.035434" level="FAIL">Element with locator '//*[@id="nid-tbw-3"]/button/span' not found.</msg>
+<arg>//*[@id="nid-tbw-3"]/button/span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="FAIL" start="2024-08-17T15:09:10.457225" elapsed="0.582736">Element with locator '//*[@id="nid-tbw-3"]/button/span' not found.</status>
 </kw>
-<status status="PASS" start="2024-08-17T14:08:49.343902" elapsed="2.341544"/>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-17T15:09:11.039961" elapsed="0.000000"/>
+</kw>
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<arg>//*[@id="nid-tbw-3"]/span/ul/li[2]</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-17T15:09:11.039961" elapsed="0.001000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="nid-tbw-3"]/span/ul/li[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-17T15:09:11.040961" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-17T15:09:10.456224" elapsed="0.584737">Element with locator '//*[@id="nid-tbw-3"]/button/span' not found.</status>
+</kw>
+<kw name="Verify filter results" owner="eBay_UserDefinedKeywords">
+<status status="NOT RUN" start="2024-08-17T15:09:11.041963" elapsed="0.000000"/>
+</kw>
+<kw name="Finish TestCase" owner="CommonFunctionality">
+<status status="NOT RUN" start="2024-08-17T15:09:11.042962" elapsed="0.000000"/>
 </kw>
 <doc>This test case verify the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" start="2024-08-17T14:08:40.978556" elapsed="10.707904"/>
+<status status="FAIL" start="2024-08-17T15:09:02.329175" elapsed="8.713787">Element with locator '//*[@id="nid-tbw-3"]/button/span' not found.</status>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="PASS" start="2024-08-17T14:08:40.634146" elapsed="11.055315"/>
+<status status="FAIL" start="2024-08-17T15:09:02.039079" elapsed="9.005920"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="0" fail="1" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
 </suite>
 </statistics>
 <errors>
