@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T12:56:34.457790" rpa="false" schemaversion="5">
-<suite id="s1" name="GoogleSearch" source="D:\programming-new\robotfwtutorial\Tests\Google\FunctionalTestSuite\GoogleSearch.robot">
-<test id="s1-t1" name="This is sample test case" line="8">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T13:17:22.416329" rpa="false" schemaversion="5">
+<suite id="s1" name="BasicSearch" source="D:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
+<test id="s1-t1" name="Verify basic search functionality for eBay" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-17T12:56:34.760382" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
-<arg>http://www.google.com</arg>
+<msg time="2024-08-17T13:17:22.794749" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-17T12:56:34.759811" elapsed="23.663959"/>
+<status status="PASS" start="2024-08-17T13:17:22.794749" elapsed="4.011140"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-17T13:17:26.807864" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
+<arg>//*[@id="gh-ac"]</arg>
+<arg>mobile</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T13:17:26.807358" elapsed="0.135312"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-08-17T13:17:26.943175" level="INFO">Sending key(s) ('[Return]',) to //*[@id="gh-btn"] element.</msg>
+<msg time="2024-08-17T13:17:30.161279" level="INFO">Sending keys [Return]</msg>
+<arg>//*[@id="gh-btn"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-08-17T13:17:26.943175" elapsed="3.322517"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-08-17T13:17:30.294185" level="INFO">Current page contains text 'results for mobile'.</msg>
+<arg>results for mobile</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-08-17T13:17:30.266690" elapsed="0.027495"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-17T12:56:58.424782" elapsed="2.295015"/>
+<status status="PASS" start="2024-08-17T13:17:30.295196" elapsed="2.285731"/>
 </kw>
-<doc>Google test</doc>
-<tag>regression</tag>
-<status status="PASS" start="2024-08-17T12:56:34.758751" elapsed="25.962085"/>
+<doc>This test case verify the basic search</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2024-08-17T13:17:22.792749" elapsed="9.789460"/>
 </test>
-<status status="PASS" start="2024-08-17T12:56:34.460859" elapsed="26.263850"/>
+<doc>Basic Search Functionality</doc>
+<status status="PASS" start="2024-08-17T13:17:22.419980" elapsed="10.163265"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="GoogleSearch">GoogleSearch</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
 </suite>
 </statistics>
 <errors>
