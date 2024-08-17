@@ -1,106 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T20:12:06.897432" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T23:29:25.509236" rpa="false" schemaversion="5">
 <suite id="s1" name="BasicSearch" source="D:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
-<test id="s1-t1" name="Verify basic search functionality for eBay" line="13">
+<test id="s1-t1" name="Verify basic search functionality for eBay" line="15">
 <kw name="Start TestCase" owner="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:07.109152" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg time="2024-08-17T23:29:25.748173" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-17T20:12:07.109152" elapsed="3.760332"/>
+<status status="PASS" start="2024-08-17T23:29:25.748173" elapsed="5.424784"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-17T20:12:10.870494" elapsed="0.047666"/>
+<status status="PASS" start="2024-08-17T23:29:31.172957" elapsed="0.038049"/>
 </kw>
-<status status="PASS" start="2024-08-17T20:12:07.107646" elapsed="3.810514"/>
+<status status="PASS" start="2024-08-17T23:29:25.748173" elapsed="5.463840"/>
 </kw>
-<kw name="Verify Search Results" owner="eBay_UserDefinedKeywords">
+<kw name="Input Search Text and Click Search" owner="HeaderPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:10.920682" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
+<msg time="2024-08-17T23:29:31.214025" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
 <arg>xpath://*[@id="gh-ac"]</arg>
 <arg>mobile</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-17T20:12:10.919668" elapsed="0.227995"/>
+<status status="PASS" start="2024-08-17T23:29:31.213020" elapsed="0.236125"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:11.147663" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
-<msg time="2024-08-17T20:12:13.362108" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2024-08-17T20:12:13.362108" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2024-08-17T23:29:31.450651" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg time="2024-08-17T23:29:33.545680" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-08-17T23:29:33.545680" level="INFO">Releasing special key RETURN.</msg>
 <arg>xpath://*[@id="gh-btn"]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-08-17T20:12:11.147663" elapsed="2.338884"/>
+<status status="PASS" start="2024-08-17T23:29:31.449145" elapsed="2.200006"/>
 </kw>
+<status status="PASS" start="2024-08-17T23:29:31.213020" elapsed="2.436131"/>
+</kw>
+<kw name="Verify Search Results" owner="SearchResultsPage">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:13.519380" level="INFO">Current page contains text 'results for mobile'.</msg>
+<msg time="2024-08-17T23:29:33.699460" level="INFO">Current page contains text 'results for mobile'.</msg>
 <arg>results for mobile</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-08-17T20:12:13.486547" elapsed="0.032833"/>
+<status status="PASS" start="2024-08-17T23:29:33.649151" elapsed="0.050309"/>
 </kw>
-<status status="PASS" start="2024-08-17T20:12:10.919668" elapsed="2.599712"/>
-</kw>
-<kw name="Filter results by condition" owner="eBay_UserDefinedKeywords">
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:13.520375" level="INFO">Simulating Mouse Over on element 'xpath://div[@class="srp-controls__resize-display"]/span/button'.</msg>
-<arg>xpath://div[@class="srp-controls__resize-display"]/span/button</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-08-17T20:12:13.520375" elapsed="0.337988"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-17T20:12:16.858912" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-17T20:12:13.858363" elapsed="3.000549"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:16.859423" level="INFO">Clicking element 'xpath://div[@class="srp-controls__resize-display"]/span/button/span'.</msg>
-<arg>xpath://div[@class="srp-controls__resize-display"]/span/button/span</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-17T20:12:16.859423" elapsed="0.104150"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:16.964574" level="INFO">Clicking element 'xpath://div[@class="srp-controls__resize-display"]/span/span/ul/li[2]'.</msg>
-<arg>xpath://div[@class="srp-controls__resize-display"]/span/span/ul/li[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-17T20:12:16.963573" elapsed="2.080406"/>
-</kw>
-<status status="PASS" start="2024-08-17T20:12:13.520375" elapsed="5.523604"/>
-</kw>
-<kw name="Verify filter results" owner="eBay_UserDefinedKeywords">
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-08-17T20:12:19.553127" level="INFO">Element '//li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]/div/a/div' contains text 'New'.</msg>
-<arg>//li[@class="carousel__snap-point srp-carousel-list__item srp-multi-aspect__item--applied"]/div/a/div</arg>
-<arg>New</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-17T20:12:19.044957" elapsed="0.509167"/>
-</kw>
-<status status="PASS" start="2024-08-17T20:12:19.044957" elapsed="0.509167"/>
+<status status="PASS" start="2024-08-17T23:29:33.649151" elapsed="0.050309"/>
 </kw>
 <kw name="Finish TestCase" owner="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-17T20:12:19.555126" elapsed="2.468261"/>
+<status status="PASS" start="2024-08-17T23:29:33.700924" elapsed="2.406941"/>
 </kw>
-<status status="PASS" start="2024-08-17T20:12:19.555126" elapsed="2.468261"/>
+<status status="PASS" start="2024-08-17T23:29:33.700924" elapsed="2.406941"/>
 </kw>
 <doc>This test case verify the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" start="2024-08-17T20:12:07.107646" elapsed="14.916742"/>
+<status status="PASS" start="2024-08-17T23:29:25.747034" elapsed="10.361696"/>
+</test>
+<test id="s1-t2" name="Verify advanced search functionality" line="22">
+<kw name="Start TestCase" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-17T23:29:36.113360" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<arg>https://www.ebay.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-17T23:29:36.112313" elapsed="3.271414"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-17T23:29:39.384727" elapsed="0.037124"/>
+</kw>
+<status status="PASS" start="2024-08-17T23:29:36.112313" elapsed="3.309538"/>
+</kw>
+<kw name="Click on Advanced Search Link" owner="HeaderPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-17T23:29:39.423178" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
+<arg>//*[@id="gh-as-a"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T23:29:39.423178" elapsed="1.128304"/>
+</kw>
+<status status="PASS" start="2024-08-17T23:29:39.421851" elapsed="1.129631"/>
+</kw>
+<kw name="Finish TestCase" owner="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-17T23:29:40.552739" elapsed="2.303002"/>
+</kw>
+<status status="PASS" start="2024-08-17T23:29:40.551482" elapsed="2.304259"/>
+</kw>
+<doc>This test case verify the advanced search</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2024-08-17T23:29:36.111311" elapsed="6.745433"/>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="PASS" start="2024-08-17T20:12:06.899430" elapsed="15.125957"/>
+<status status="PASS" start="2024-08-17T23:29:25.511012" elapsed="17.347243"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="2" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
 </suite>
 </statistics>
 <errors>
