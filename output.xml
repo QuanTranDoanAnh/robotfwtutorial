@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-17T23:38:41.644154" rpa="false" schemaversion="5">
+<suite id="s1" name="BasicSearch" source="d:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
+<test id="s1-t1" name="Verify advanced search functionality" line="22">
+<kw name="Start TestCase" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-17T23:38:41.837144" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<arg>https://www.ebay.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-17T23:38:41.837144" elapsed="3.485235"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-17T23:38:45.323419" elapsed="0.040197"/>
+</kw>
+<status status="PASS" start="2024-08-17T23:38:41.836216" elapsed="3.527400"/>
+</kw>
+<kw name="Click on Advanced Search Link" owner="HeaderPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-17T23:38:45.366616" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
+<arg>//*[@id="gh-as-a"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-17T23:38:45.365616" elapsed="1.066797"/>
+</kw>
+<status status="PASS" start="2024-08-17T23:38:45.364616" elapsed="1.067797"/>
+</kw>
+<kw name="Finish TestCase" owner="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-17T23:38:46.433414" elapsed="2.424092"/>
+</kw>
+<status status="PASS" start="2024-08-17T23:38:46.432413" elapsed="2.426131"/>
+</kw>
+<doc>This test case verify the advanced search</doc>
+<tag>Functional</tag>
+<status status="PASS" start="2024-08-17T23:38:41.836216" elapsed="7.022328"/>
+</test>
+<doc>Basic Search Functionality</doc>
+<status status="PASS" start="2024-08-17T23:38:41.660252" elapsed="7.199812"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
