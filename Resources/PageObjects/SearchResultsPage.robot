@@ -7,7 +7,7 @@ ${search_result}    results for
 
 *** Keywords ***
 Verify Search Results
-    Page Should Contain    ${search_result} ${search_text}
+    Page Should Contain    ${search_result} ${search_text}[1]
 
 Select product condition
     Mouse Over    xpath://div[@class="srp-controls__resize-display"]/span/button

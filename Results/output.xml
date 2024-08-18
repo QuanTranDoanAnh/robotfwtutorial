@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-18T21:39:44.824196" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-18T23:08:11.159297" rpa="false" schemaversion="5">
 <suite id="s1" name="BasicSearch" source="D:\programming-new\robotfwtutorial\Tests\eBay\BasicSearch.robot">
 <test id="s1-t1" name="Verify basic search functionality for eBay" line="15">
 <kw name="Start TestCase" owner="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-18T21:39:45.108913" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg time="2024-08-18T23:08:11.343224" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-18T21:39:45.107916" elapsed="14.298002"/>
+<status status="PASS" start="2024-08-18T23:08:11.343224" elapsed="3.341574"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-18T21:39:59.405918" elapsed="0.069973"/>
+<status status="PASS" start="2024-08-18T23:08:14.684798" elapsed="0.048379"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:39:45.107916" elapsed="14.367975"/>
+<status status="PASS" start="2024-08-18T23:08:11.343224" elapsed="3.389953"/>
 </kw>
 <kw name="Input Search Text and Click Search" owner="HeaderPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-18T21:39:59.477397" level="INFO">Typing text 'robot' into text field 'xpath://*[@id="gh-ac"]'.</msg>
+<msg time="2024-08-18T23:08:14.737552" level="INFO">Typing text 'travel' into text field 'xpath://*[@id="gh-ac"]'.</msg>
 <arg>xpath://*[@id="gh-ac"]</arg>
-<arg>${search_text}</arg>
+<arg>${search_text}[1]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-18T21:39:59.477397" elapsed="0.209597"/>
+<status status="PASS" start="2024-08-18T23:08:14.735177" elapsed="0.180518"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-08-18T21:39:59.686994" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
-<msg time="2024-08-18T21:40:02.874737" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2024-08-18T21:40:02.874737" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2024-08-18T23:08:14.916695" level="INFO">Sending key(s) ('RETURN',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg time="2024-08-18T23:08:19.508326" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2024-08-18T23:08:19.508326" level="INFO">Releasing special key RETURN.</msg>
 <arg>xpath://*[@id="gh-btn"]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-08-18T21:39:59.686994" elapsed="3.210060"/>
+<status status="PASS" start="2024-08-18T23:08:14.915695" elapsed="4.694033"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:39:59.476888" elapsed="3.420166"/>
+<status status="PASS" start="2024-08-18T23:08:14.735177" elapsed="4.874551"/>
 </kw>
 <kw name="Verify Search Results" owner="SearchResultsPage">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-08-18T21:40:02.929206" level="INFO">Current page contains text 'results for robot'.</msg>
-<arg>${search_result} ${search_text}</arg>
+<msg time="2024-08-18T23:08:19.631061" level="INFO">Current page contains text 'results for travel'.</msg>
+<arg>${search_result} ${search_text}[1]</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-08-18T21:40:02.898057" elapsed="0.032062"/>
+<status status="PASS" start="2024-08-18T23:08:19.610734" elapsed="0.020327"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:40:02.898057" elapsed="0.032062"/>
+<status status="PASS" start="2024-08-18T23:08:19.609728" elapsed="0.021333"/>
 </kw>
 <kw name="Finish TestCase" owner="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-18T21:40:02.931625" elapsed="2.584448"/>
+<status status="PASS" start="2024-08-18T23:08:19.632058" elapsed="2.386246"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:40:02.931119" elapsed="2.584954"/>
+<status status="PASS" start="2024-08-18T23:08:19.632058" elapsed="2.386246"/>
 </kw>
 <doc>This test case verify the basic search</doc>
 <tag>Functional</tag>
-<status status="PASS" start="2024-08-18T21:39:45.106912" elapsed="20.409161"/>
+<status status="PASS" start="2024-08-18T23:08:11.342201" elapsed="10.677103"/>
 </test>
 <test id="s1-t2" name="Verify advanced search functionality" line="22">
 <kw name="Start TestCase" owner="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-18T21:40:05.517501" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg time="2024-08-18T23:08:22.022411" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-18T21:40:05.517501" elapsed="3.231103"/>
+<status status="PASS" start="2024-08-18T23:08:22.021395" elapsed="3.335440"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-18T21:40:08.748604" elapsed="0.052835"/>
+<status status="PASS" start="2024-08-18T23:08:25.357739" elapsed="0.037542"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:40:05.517501" elapsed="3.283938"/>
+<status status="PASS" start="2024-08-18T23:08:22.021395" elapsed="3.373886"/>
 </kw>
 <kw name="Click on Advanced Search Link" owner="HeaderPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-18T21:40:08.803454" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
+<msg time="2024-08-18T23:08:25.398297" level="INFO">Clicking element '//*[@id="gh-as-a"]'.</msg>
 <arg>//*[@id="gh-as-a"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-18T21:40:08.802448" elapsed="1.091952"/>
+<status status="PASS" start="2024-08-18T23:08:25.398297" elapsed="1.098582"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:40:08.802448" elapsed="1.091952"/>
+<status status="PASS" start="2024-08-18T23:08:25.397309" elapsed="1.099570"/>
 </kw>
 <kw name="Finish TestCase" owner="CommonFunctionality" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-18T21:40:09.896441" elapsed="2.274714"/>
+<status status="PASS" start="2024-08-18T23:08:26.497839" elapsed="2.247264"/>
 </kw>
-<status status="PASS" start="2024-08-18T21:40:09.895409" elapsed="2.275746"/>
+<status status="PASS" start="2024-08-18T23:08:26.497839" elapsed="2.247264"/>
 </kw>
 <doc>This test case verify the advanced search</doc>
 <tag>Functional</tag>
-<status status="PASS" start="2024-08-18T21:40:05.516073" elapsed="6.656027"/>
+<status status="PASS" start="2024-08-18T23:08:22.020300" elapsed="6.725801"/>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="PASS" start="2024-08-18T21:39:44.826196" elapsed="27.346886"/>
+<status status="PASS" start="2024-08-18T23:08:11.160299" elapsed="17.587803"/>
 </suite>
 <statistics>
 <total>
