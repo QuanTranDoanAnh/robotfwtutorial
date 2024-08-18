@@ -4,11 +4,14 @@ Library    SeleniumLibrary
 *** Variables ***
 #${search_text}    robot
 
-@{search_text}    books    travel    robot    gifts
+#@{search_text}    books    travel    robot    gifts
+
+#&{search_text}    abc=books    bcd=travel
 
 *** Keywords ***
 Input Search Text and Click Search
-    Input Text    xpath://*[@id="gh-ac"]    ${search_text}[1]
+    [Arguments]    ${search_text}
+    Input Text    xpath://*[@id="gh-ac"]    ${search_text}
     Press Keys    xpath://*[@id="gh-btn"]    RETURN
 
 Click on Advanced Search Link
